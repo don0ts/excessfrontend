@@ -62,7 +62,7 @@ class App extends Component {
               <div className='container-fluid'>
                 <Switch>
                   {/* <Route exact path="/academies/" component={AcademyList} /> */}
-                  <Route exact path="/players/" component={PlayerList} />
+                  <Route exact path="/listofplayers000/" component={PlayerList} />
                 </Switch>
               </div>
 

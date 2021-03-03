@@ -1,19 +1,40 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const GreetingsPage = () => {
     return (
+        <div>
+        <style type='text/css'>
+        {`
+.container{
+    height: 100%;
+    align-content: center;
+    }
+    
+    .card{
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;
+    background-color: rgba(0,0,0,0.5) !important;
+    padding-bottom: 30px;
+    }
+   `}
+    </style>
+        <div className='container card'>
         <div className='text-light text-center'>
             <br />
             <br />
-            <h2>¡GRACIAS POR SUSCRIBIRTE!</h2>
+            <h3>¡GRACIAS POR INSCRIBIRTE!</h3>
             <br />
-            <h4>Su información ha sido añadida a la base de datos de la AAEV</h4>
+            <h4>Si deseas inscribir a otro prospecto haz <Link to={"/players/create"}>CLICK AQUÍ</Link></h4>
             <br />
-            <h4>Si desea realizar alguna edición contacte con un administrador y este <br />
-                le proporcionará un enlace para hacer los cambios</h4>
+            <h4>Si deseas realizar algún cambio contacta a un administrador.</h4>
             <br />
-            <p>Admin: +58 424 650 4898</p>
+            <p>Admin Contact: +58 424 650 4898 or grios.j98@gmail.com</p>
 
+        </div>
+        </div>
         </div>
     );
 }

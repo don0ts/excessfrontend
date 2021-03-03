@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Logo from "./excesslogo.png";
-import Router, { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
@@ -34,12 +33,10 @@ class Navbar extends Component {
         </style>
         <nav className="navbar navbar-expand-lg navbar-dark nav-bg">
           <div className="navbar-brand" href="#">
-            <Link style={{ textDecoration:'none', color: 'white' }} to="/">
             <span className="h4">
               <img src={Logo} className='imgAdjustments' alt="eXcess logo" />{" "}
               
             </span>
-            </Link>
           </div>
         </nav>
       </div>

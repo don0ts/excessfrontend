@@ -5,7 +5,8 @@ const Home = () => {
         <div>
             <br />
             <br />
-            <h2 className='text-light text-center mt-5'>Bienvenido a la base de datos de la AAEV!</h2>
+            <h2 className='text-light text-center mt-5'>Welcome to the eXcess website</h2>
+            <h3 className='text-light text-center mt-5'>This page is currently under construction, we appreciate your understanding.</h3>
         </div>
     )
 }

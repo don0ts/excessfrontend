@@ -18,7 +18,7 @@ const Player = props => (
                | 
             <a className='text-light' 
             href="#" 
-            onClick={() => { if (window.confirm('Estas seguro de querer eliminar este elemento?')) props.deletePlayer(props.player._id) }}>
+            onClick={() => { if (window.confirm('Estas seguro de eliminar este elemento?')) props.deletePlayer(props.player._id) }}>
             Eliminar
             </a>
         </td>
@@ -35,7 +35,7 @@ export default class PlayerList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/players/')
+        axios.get('https://excessbackend.herokuapp.com/players/')
             .then(response => {
                 this.setState({ players: response.data })
             })
@@ -45,7 +45,7 @@ export default class PlayerList extends Component {
     }
 
     deletePlayer(id) {
-        axios.delete('http://localhost:5000/players/' + id)
+        axios.delete('https://excessbackend.herokuapp.com/players/' + id)
             .then(res => console.log(res.data));
         this.setState({
             players: this.state.players.filter(el => el._id !== id)

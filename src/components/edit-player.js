@@ -22,7 +22,7 @@ export default class EditPlayer extends Component {
 
     componentDidMount() {
 
-        axios.get('http://localhost:5000/players/' + this.props.match.params.id)
+        axios.get('https://excessbackend.herokuapp.com/players/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     playerAcademy: response.data.playerAcademy,
@@ -109,10 +109,10 @@ export default class EditPlayer extends Component {
 
         console.log(player);
 
-        axios.put('http://localhost:5000/players/update/' + this.props.match.params.id, player)
+        axios.put('https://excessbackend.herokuapp.com/players/update/' + this.props.match.params.id, player)
             .then(res => console.log(res.data));
 
-        window.location = '/players/'
+        window.location = '/listofplayers000/'
 
     }
 
